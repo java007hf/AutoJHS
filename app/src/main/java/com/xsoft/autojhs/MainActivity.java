@@ -41,9 +41,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bindJHSService();
-
-        test();
+//        bindJHSService();
     }
 
     @Override
@@ -56,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        unbindJHSService();
+//        unbindJHSService();
     }
 
     private void bindJHSService() {
@@ -79,16 +77,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-
-
-    private void test() {
-        JHSItemData jhsItemData = new JHSItemData();
-
-        jhsItemData.settqgDetailUrl("detail.ju.taobao.com/home.htm?id=10000059115063&item_id=559253712104");
-
-        Log.d(TAG, "idString = " + jhsItemData.getJuId());
-        Log.d(TAG, "itemidString = " + jhsItemData.getItemId());
-        Log.d(TAG, "getjuItemUrl = " + jhsItemData.getjuItemUrl());
-        Log.d(TAG, "gettqgDetailUrl = " + jhsItemData.gettqgDetailUrl());
-    }
 }
